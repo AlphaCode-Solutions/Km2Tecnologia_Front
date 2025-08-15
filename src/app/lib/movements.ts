@@ -1,0 +1,53 @@
+export const movements = [
+    {
+        companyId: "bbe9917d-bb99-4e19-b95e-1c16d1f8565d (KM2Ferreteria)",
+        amount: 30,
+        registerType: "Ingreso",
+        categoryId: "6f309c2f-60f6-44a3-a5c8-3249d421b444 (Metalurgica)",
+        subCategoryId: "6f309c2f-60f6-44a3-a5c8-3249d421ba22 (Clavos 9mm)",
+        description: "Venta de calvos del 9mm",
+        date: "2025-04-10",
+        quantity: "100",
+    },
+    {
+        companyId: "bbe9917d-bb99-4e19-b95e-1c16d1f8565d (KM2Ferreteria)",
+        amount: 20,
+        registerType: "Costos",
+        categoryId: "6f309c2f-60f6-44a3-a5c8-3249d421b444 (Metalurgica)",
+        subCategoryId: "6f309c2f-60f6-44a3-a5c8-3249d421ba22 (Clavos 9mm)",
+        description: "Compra de calvos del 9mm",
+        date: "2025-04-10",
+        quantity: "100",
+    },
+    {
+        companyId: "bbe9917d-bb99-4e19-b95e-1c16d1f8565d (KM2Ferreteria)",
+        amount: 300,
+        registerType: "Ingreso",
+        categoryId: "6f309c2f-60f6-44a3-a5c8-3249d421b444 (Metalurgica)",
+        subCategoryId: "6f309c2f-60f6-44a3-a5c8-3249d421ba22 (caños tipo C de 1/2)",
+        description: "Venta de caños tipo C de 1/2",
+        date: "2025-04-10",
+        quantity: "50",
+    },
+    {
+        companyId: "bbe9917d-bb99-4e19-b95e-1c16d1f8565d (KM2Ferreteria)",
+        amount: 100,
+        registerType: "Costos",
+        categoryId: "6f309c2f-60f6-44a3-a5c8-3249d421b444 (Metalurgica)",
+        subCategoryId: "6f309c2f-60f6-44a3-a5c8-3249d421ba22 (caños tipo C de 1/2)",
+        description: "Compra de caños tipo C de 1/2",
+        date: "2025-04-10",
+        quantity: "50",
+    },
+    {
+        companyId: "bbe9917d-bb99-4e19-b95e-1c16d1f8565d (KM2Ferreteria)",
+        amount: 1000,
+        registerType: "Gastos",
+        categoryId: "6f309c2f-60f6-44a3-a5c8-3249d421b444 (Sueldos y Beneficios)",
+        subCategoryId: "6f309c2f-60f6-44a3-a5c8-3249d421ba22 (sueldos empleados)",
+        description: "Pago de sueldos mensual",
+        date: "2025-04-10",
+    },
+]
+
+
