@@ -1,5 +1,5 @@
 import MovementsTable from "@/app/ui/components/details/movementsTable";
-import NewMovement from "@/app/ui/components/buttons/addMovement";
+import NewMovement from "@/app/ui/shared/buttons/addMovement";
 
 export default function Details() {
     return (

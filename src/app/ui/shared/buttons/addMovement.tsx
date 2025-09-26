@@ -3,7 +3,7 @@
 import { Box, Fab } from "@mui/material";
 import AddIcon from '@mui/icons-material/Add';
 import { useState } from "react";
-import NewMovement from "../register/newMovement";
+import NewMovement from "../../components/register/newMovement";
 
 export default function AddMovement() {
     const [open, setOpen] = useState(false);
