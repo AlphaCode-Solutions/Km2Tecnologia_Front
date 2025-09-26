@@ -1,0 +1,11 @@
+.chips {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.chipButton {
+    text-transform: none;
+    padding: 4px 10px;
+    border-width: 1px;
+}

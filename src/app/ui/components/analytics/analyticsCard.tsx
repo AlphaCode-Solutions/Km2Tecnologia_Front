@@ -5,11 +5,11 @@ import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import TrendingDownIcon from '@mui/icons-material/TrendingDown';
 
 interface AnalyticsCardData {
-    title: string;        // "INGRESOS"
-    value: string;        // "$5,502.45"
-    percentage: number;   // 12.5
-    isPositive: boolean;  // true/false
-    description?: string; // opcional
+    title: string;        
+    value: string;        
+    percentage: number;   
+    isPositive: boolean;  
+    description?: string; 
 }
 
 interface AnalyticsCardProps {

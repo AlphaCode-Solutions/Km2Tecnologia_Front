@@ -1,5 +1,5 @@
 import Footer from "@/app/ui/footer";
-import Navbar from "@/app/ui/navbar";
+import Navbar from "@/app/ui/components/navbar/navbar";
 
 export default function AnalyticsLayout({ children }: { children: React.ReactNode }) {
     return (

@@ -6,8 +6,13 @@ import { Visibility, VisibilityOff } from "@mui/icons-material";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { login } from "@/app/lib/actions/login";
+import { useRouter } from "next/navigation";
 
 export default function Page() {
+    const router = useRouter();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
 
     const handleClickShowPassword = () => {
@@ -22,13 +27,18 @@ export default function Page() {
         event.preventDefault();
     }
 
+    const handleLogin = async () => {
+        await login(email, password);
+        router.push("/analytics/dashboard");
+    }
+
     return (
         <div className="flex flex-col h-screen w-screen bg-gray-50 items-center justify-center">
             <div className="bg-white w-full flex items-center justify-center absolute top-0 left-0 p-4">
                 <Image
-                    src="/logo.png" 
-                    alt="logo" 
-                    width={100} 
+                    src="/logo.png"
+                    alt="logo"
+                    width={100}
                     height={100}
                 />
             </div>
@@ -36,11 +46,13 @@ export default function Page() {
                 <h1>Iniciar Sesión</h1>
                 <p>¡Bienvenido de nuevo! Inicia sesión para acceder a tu cuenta</p>
                 <form className="flex flex-col gap-4 border border-blue-200 rounded-lg p-10">
-                    <TextField 
-                        id="outlined-basic" 
-                        label="Email" 
-                        variant="outlined" 
-                        className="w-100" 
+                    <TextField
+                        id="outlined-basic"
+                        label="Email"
+                        variant="outlined"
+                        className="w-100"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                     />
                     <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
                     <OutlinedInput
@@ -62,6 +74,8 @@ export default function Page() {
                             </InputAdornment>
                         }
                         label="Password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
                     />
                     <div className="w-full flex items-center justify-between">
                         <div className="flex items-center gap-2">
@@ -79,13 +93,14 @@ export default function Page() {
                             width: '100%',
                             color: 'white'
                         }}
+                        onClick={handleLogin}
                     >
                         Iniciar Sesión
                     </Button>
                 </form>
                 <div className="flex items-center justify-center">
                     <p className="text-sm">
-                        ¿No tienes una cuenta? 
+                        ¿No tienes una cuenta?
                         <Link href="/auth/register" className="text-[#C14A00]"> Regístrate</Link>
                     </p>
                 </div>

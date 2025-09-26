@@ -3,7 +3,6 @@ import axios from "axios";
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 const getAnalyticsData = async () => {
-    // const data = await axios.get(`${API_URL}/analytics`);
     const data = [
         {
             id: 1,
@@ -34,7 +33,19 @@ const getAnalyticsData = async () => {
             title: "UTILIDADES",
             value: "$4,302.45",
             percentage: 12.5,
-        }
+        },
+        {
+            id: 6,
+            title: "TICKET PROMEDIO",
+            value: "$4,302.45",
+            percentage: 12.5,
+        },
+        {
+            id: 7,
+            title: "TRANSACCIONES",
+            value: "$4,302.45",
+            percentage: 12.5,
+        },
     ]
     return data.map((item) => ({
         ...item,
