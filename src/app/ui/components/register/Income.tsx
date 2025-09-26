@@ -7,7 +7,7 @@ import AddCategory from "../../shared/buttons/addCategory";
 import { useState } from "react";
 import styles from './Income.module.css';
 import { GeneralButton } from "../../shared/buttons/generalButton";
-import SelectDate from "../../shared/buttons/SelectDate";
+import SelectDate from "../../shared/buttons/selectDate";
 
 export default function Income() {
     const [category, setCategory] = useState<any>(null);

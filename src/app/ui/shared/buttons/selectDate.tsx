@@ -7,7 +7,12 @@ import styles from './selectDate.module.css';
 import dayjs from "dayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
-export default function SelectDate({ date, setDate }: { date: any, setDate: any }) {
+interface SelectDateProps {
+    date: any;
+    setDate: any;
+}
+
+export default function SelectDate({ date, setDate }: SelectDateProps) {
     return (
         <Box className={styles.datePicker}>
             {(() => {
