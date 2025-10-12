@@ -3,8 +3,13 @@
 import { Box, Checkbox, Fab, FormControl, FormControlLabel, Input, InputLabel } from "@mui/material";
 import AddIcon from '@mui/icons-material/Add';
 import { useState } from "react";
+import { movementColor } from "@/app/lib/actions/movementColor";
 
-export default function AddCategory() {
+interface AddCategoryProps {
+    movement: string;
+}
+
+export default function AddCategory({ movement }: AddCategoryProps) {
     const [open, setOpen] = useState(false);
     const handleOpen = () => {
         setOpen(!open);
@@ -24,7 +29,7 @@ export default function AddCategory() {
                 '& > :not(style)': { m: 1 }
             }}
         >
-            <Fab color="primary" aria-label="add">
+            <Fab sx={{ color: movementColor(movement) as any }} aria-label="add">
                 <AddIcon onClick={() => { handleOpen(); }} />
             </Fab>
             {open &&

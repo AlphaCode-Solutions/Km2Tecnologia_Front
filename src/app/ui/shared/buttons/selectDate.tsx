@@ -10,9 +10,10 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 interface SelectDateProps {
     date: any;
     setDate: any;
+    movement: string;
 }
 
-export default function SelectDate({ date, setDate }: SelectDateProps) {
+export default function SelectDate({ date, setDate, movement }: SelectDateProps) {
     return (
         <Box className={styles.datePicker}>
             {(() => {
@@ -37,6 +38,7 @@ export default function SelectDate({ date, setDate }: SelectDateProps) {
                             selected={isSelected}
                             disabled={false}
                             onClick={option.onClick}
+                            movement={movement}
                         >
                             {option.label}
                         </GeneralButton>

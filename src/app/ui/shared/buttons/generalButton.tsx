@@ -1,6 +1,7 @@
 import { Button } from "@mui/material";
 import { clsx } from "clsx";
 import styles from './generalButton.module.css';
+import { movementColor } from "@/app/lib/actions/movementColor";
 
 
 interface GeneralButtonProps {
@@ -11,20 +12,22 @@ interface GeneralButtonProps {
     selected: any;
 }
 
-export const GeneralButton = ({ children, onClick, variant, disabled, selected }: GeneralButtonProps) => {
+
+export const GeneralButton = ({ movement, children, onClick, variant, disabled, selected }: GeneralButtonProps) => {
+
     return (
         <Button
             key={children}
             type="button"
             variant={variant}
             className={clsx(styles.chipButton,
-
+                movementColor(movement),
                 { [styles.chipButtonSelected]: selected })}
             sx={{
                 backgroundColor: 'transparent',
-                color: selected ? 'success.main' : 'gray',
+                color: selected ? movementColor(movement) : 'gray',
                 border: '1px solid',
-                borderColor: selected ? 'success.main' : 'gray',
+                borderColor: selected ? movementColor(movement) : 'gray',
             }}
             onClick={onClick}
             disabled={disabled}

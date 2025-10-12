@@ -54,3 +54,18 @@ export const costsCategories = [
         name: "Sueldos y Beneficios",
     },
 ]
+
+export const indicatorsCategories = [
+    {
+        id: 1,
+        name: "Libra Movidas",
+    },
+    {
+        id: 2,
+        name: "Facturas",
+    },
+    {
+        id: 3,
+        name: "Clientes Nuevos",
+    },
+]

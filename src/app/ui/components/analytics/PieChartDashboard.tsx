@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { pieArcLabelClasses, PieChart } from '@mui/x-charts/PieChart';
-import { movements } from '@/app/lib/movements';
+import { movements } from '@/app/lib/constant/movements';
 import { groupByRegisterType } from '@/app/lib/hooks/groupByRegisterType';
 
 export default function PieChartDashboard() {

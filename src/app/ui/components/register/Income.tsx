@@ -53,13 +53,14 @@ export default function Income() {
                                     onClick={() => setCategory(selected ? null : item.name)}
                                     selected={selected}
                                     disabled={false}
+                                    movement="income"
                                 >
                                     {item.name}
                                 </GeneralButton>
                             );
                         })}
                     </Box>
-                    <AddCategory />
+                    <AddCategory movement="income" />
                     <TextField
                         id="description"
                         name="description"
@@ -67,7 +68,7 @@ export default function Income() {
                         fullWidth
                     />
                     Fecha
-                    <SelectDate date={date} setDate={setDate} />
+                    <SelectDate date={date} setDate={setDate} movement="income" />
                 </form>
             </DialogContent>
 

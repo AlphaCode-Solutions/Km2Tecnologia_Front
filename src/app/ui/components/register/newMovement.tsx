@@ -17,9 +17,9 @@ export default function NewMovement({ open, handleClose }: { open: boolean, hand
         case "Gastos":
             content = <Bills />;
             break;
-        case "Costos":
-            content = <Costs />;
-            break;
+        // case "Costos":
+        //     content = <Costs />;
+        //     break;
         case "Indicadores":
             content = <Indicators />;
             break;
@@ -41,7 +41,8 @@ export default function NewMovement({ open, handleClose }: { open: boolean, hand
                 <div
                     id="registerType"
                 >
-                    <Button variant="outlined"
+                    <Button
+                        variant="outlined"
                         onClick={() => setRegisterType("Ingresos")}
                     >
                         Ingresos
@@ -51,11 +52,11 @@ export default function NewMovement({ open, handleClose }: { open: boolean, hand
                     >
                         Gastos
                     </Button>
-                    <Button variant="outlined"
+                    {/* <Button variant="outlined"
                         onClick={() => setRegisterType("Costos")}
                     >
                         Costos
-                    </Button>
+                    </Button> */}
                     <Button variant="outlined"
                         onClick={() => setRegisterType("Indicadores")}
                     >
