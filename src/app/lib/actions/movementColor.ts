@@ -6,12 +6,12 @@ export const movementColor = (movement: string) => {
         let error = 'error.main';
         return error;
     } else if (movement === 'indicators') {
+        let info = 'info.main';
+        return info;
+    } else if (movement === 'costs') {
         let warning = 'warning.main';
         return warning;
-    } else if (movement === 'costs') {
-        let error = 'error.main';
-        return error;
     } 
-    let info = 'info.main';
-    return info;
+    let error = 'error.main';
+    return error;
 }

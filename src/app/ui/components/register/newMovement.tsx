@@ -6,9 +6,13 @@ import Income from "./Income";
 import Bills from "./Bills";
 import Costs from "./Costs";
 import Indicators from "./Indicators";
+import { movementColor } from "@/app/lib/actions/movementColor";
 
 export default function NewMovement({ open, handleClose }: { open: boolean, handleClose: () => void, handleNewMovement: () => void }) {
     const [registerType, setRegisterType] = useState("Ingresos");
+    const [selectedMovement, setSelectedMovement] = useState("income");
+
+
     let content = null;
     switch (registerType) {
         case "Ingresos":
@@ -32,6 +36,11 @@ export default function NewMovement({ open, handleClose }: { open: boolean, hand
         Indicadores: 'indicatorsForm',
     };
 
+    const graySx = { color: 'text.disabled', borderColor: 'divider', '&:hover': { borderColor: 'divider' } };
+    const selectedSx = (key: typeof selectedMovement) => {
+        const c = movementColor(key);
+        return { color: c, borderColor: c, '&:hover': { borderColor: c } };
+    };
 
     return (
         <Box >
@@ -43,22 +52,30 @@ export default function NewMovement({ open, handleClose }: { open: boolean, hand
                 >
                     <Button
                         variant="outlined"
-                        onClick={() => setRegisterType("Ingresos")}
+                        sx={selectedMovement === 'income' ? selectedSx('income') : graySx}
+                        onClick={() => { setRegisterType("Ingresos"); setSelectedMovement("income"); }}
                     >
                         Ingresos
                     </Button>
-                    <Button variant="outlined"
-                        onClick={() => setRegisterType("Gastos")}
+
+                    <Button
+                        variant="outlined"
+                        sx={selectedMovement === 'bills' ? selectedSx('bills') : graySx}
+                        onClick={() => { setRegisterType("Gastos"); setSelectedMovement("bills"); }}
                     >
                         Gastos
                     </Button>
+
                     {/* <Button variant="outlined"
-                        onClick={() => setRegisterType("Costos")}
+                        onClick={() => { setRegisterType("Costos"); setSelectedMovement("costs"); }}
                     >
                         Costos
                     </Button> */}
-                    <Button variant="outlined"
-                        onClick={() => setRegisterType("Indicadores")}
+
+                    <Button
+                        variant="outlined"
+                        sx={selectedMovement === 'indicators' ? selectedSx('indicators') : graySx}
+                        onClick={() => { setRegisterType("Indicadores"); setSelectedMovement("indicators"); }}
                     >
                         Indicadores
                     </Button>
